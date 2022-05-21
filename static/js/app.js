@@ -25,3 +25,33 @@ function buildTable(data) {
       );
     });
   }
+
+
+  // Create filters for the table and look for button clicks
+  function handleClick() {
+
+    // filter by date
+    let date = d3.select("#datetime").property("value");
+
+    // filter by user search terms (default/generic filter)
+    let filteredData = tableData;
+
+    // Have JS check for a date, return only the date specifed if found
+    if (date) {
+        // check for exact date specifed
+        filteredData = filteredData.filter(row => row.datetime === date);
+    };
+     // Rebuild the table using the filtered data
+    // @NOTE: If no date was entered, then filteredData will
+    // just be the original tableData.
+    buildTable(filteredData);
+
+    // check for a click on the webpage
+    d3.selectAll("#filter-btn").on("click", handleClick);
+};
+
+
+// Load the table as soon as the website loads
+buildTable(tableData);
+
+
