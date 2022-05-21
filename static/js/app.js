@@ -29,27 +29,26 @@ function buildTable(data) {
 
   // Create filters for the table and look for button clicks
   function handleClick() {
-
-    // filter by date
+    // Grab the datetime value from the filter
     let date = d3.select("#datetime").property("value");
-
-    // filter by user search terms (default/generic filter)
     let filteredData = tableData;
-
-    // Have JS check for a date, return only the date specifed if found
+  
+     // Check to see if a date was entered and filter the
+    // data using that date.
     if (date) {
-        // check for exact date specifed
-        filteredData = filteredData.filter(row => row.datetime === date);
+      // Apply `filter` to the table data to only keep the
+      // rows where the `datetime` value matches the filter value
+      filteredData = filteredData.filter(row => row.datetime === date);
     };
+  
      // Rebuild the table using the filtered data
     // @NOTE: If no date was entered, then filteredData will
     // just be the original tableData.
     buildTable(filteredData);
+  };
 
-    // check for a click on the webpage
-    d3.selectAll("#filter-btn").on("click", handleClick);
-};
-
+  // have d3 listen for button clicks
+  d3.selectAll("#filter-btn").on("click", handleClick);
 
 // Load the table as soon as the website loads
 buildTable(tableData);
