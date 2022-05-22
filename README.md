@@ -13,10 +13,13 @@
 ---
 #### The next part of the webpage is the table of data along with the filter boxes to the left, as seen below:
 ![image](https://user-images.githubusercontent.com/98365963/169714595-cbfe6566-d4c5-473e-8b20-ab15d93ca398.png)
+---
 #### The filters can be used to filter the data by date, city, state, country, and shape of the UFO. Any and/or all of the boxes can be populated to filter the data. The webpage waits for the user to press enter before filtering the data after inputting search criteria. As an example, filling out all of the boxes with 1/1/2010, benton, ar, us, and circle gives the following response:
 ![image](https://user-images.githubusercontent.com/98365963/169714679-f53edc3a-2a58-4689-94e4-048b291da566.png)
+---
 #### Also, only one of the boxes needs to be filled out to return the filtered data. As an example, let's look at UFOs just triangle in shape:
 ![image](https://user-images.githubusercontent.com/98365963/169714725-adf1daae-2227-4752-8af4-82091fe4b2e2.png)
+---
 #### Many of the filter boxes can be left blank, and all of the data found with the search criteria inputed will be returned. As another example, let's look at UFOs only in California:
 ![image](https://user-images.githubusercontent.com/98365963/169714815-6229996e-7fea-4f45-baa9-c88b220a1df9.png)
 ---
