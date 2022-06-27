@@ -1,6 +1,6 @@
 # UFOs
 ---
-## Analysis on UFO Sighting Data
+## Module 11: Analysis on UFO Sighting Data using JavaScript
 ---
 ### Background
 ---
